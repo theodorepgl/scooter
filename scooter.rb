@@ -1,31 +1,53 @@
 class Scooter
-	attr_reader :id, :status
-	def initialize()
-		@id = rand(1000..9999)
-		@status = "Available"
+	attr_accessor :state, :id
+  
+	def initialize(id)
+	  @id = id
+	  @state = "Available"
 	end
-
-	def park(station)
-		station.plus
-		@status = "Available"
+  
+	def rent_scooter
+	  if @state == "Available"
+		@state = "Rented"
+		puts "Scooter #{@id} has been rented."
+	  else
+		puts "Scooter #{@id} is currently #{@state}."
+	  end
 	end
-
-	def leave(station)
-		station.minus
-		status = "Rented"
+  
+	def return_scooter
+	  if @state == "Rented"
+		@state = "Available"
+		puts "Scooter #{@id} has been returned."
+	  else
+		puts "Scooter #{@id} is currently #{@state}."
+	  end
 	end
-
-	def broken!
-		@status = "Broken"
+  
+	def break_scooter
+	  if @state == "Available"
+		@state = "Broken"
+		puts "Scooter #{@id} has been marked as broken."
+	  else
+		puts "Scooter #{@id} cannot be marked as broken while it is #{@state}."
+	  end
 	end
-
-	def repaired!
-		@status = "Available"
+  
+	def repair_scooter
+	  if @state == "Broken"
+		@state = "Available"
+		puts "Scooter #{@id} has been repaired."
+	  else
+		puts "Scooter #{@id} cannot be repaired while it is #{@state}."
+	  end
 	end
-end
-
-
-scooterA = Scooter.new()
-scooterB = Scooter.new()
-puts scooterA.status
-puts scooterB.status
+  
+	def maintenance
+	  if @state == "Broken"
+		puts "Scooter #{@id} is being taken to the garage or repair shop for maintenance."
+		repair_scooter
+	  else
+		puts "Scooter #{@id} does not require maintenance."
+	  end
+	end
+  end

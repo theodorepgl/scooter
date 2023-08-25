@@ -1,7 +1,7 @@
-# Scooters exist in two states: "Available" and "Rented."
-# Implement methods to transition scooter states (e.g., rent and return) and display current status.
-# Scooters can also be marked as "Broken," rendering them temporarily unavailable for rental until repaired.
-# Broken scooters should be taken to the garage or repair shop for maintenance and returned to the fleet once repaired. 
+# DONE Scooters exist in two states: "Available" and "Rented."
+# DONE Implement methods to transition scooter states (e.g., rent and return) and display current status.
+# DONE Scooters can also be marked as "Broken," rendering them temporarily unavailable for rental until repaired.
+# DONE Broken scooters should be taken to the garage or repair shop for maintenance and returned to the fleet once repaired. 
 # Calculate and present rental duration and associated costs.
 # Designate docking stations in specific areas for scooter returns.
 # Docking stations possess a predefined scooter capacity.
