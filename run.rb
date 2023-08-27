@@ -14,8 +14,6 @@ require	'./card.rb'
 require './scooter.rb'
 require	'./station.rb'
 
-puts "Please enter your name to start rent a scooter."
-puts user_name = gets.chomp.upcase
 
 
 

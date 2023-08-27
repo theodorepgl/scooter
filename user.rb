@@ -55,7 +55,7 @@ user1 = User.new("John")
 user1.rent_scooter(scooter1)
 user1.return_scooter
 
-user2 = User.new("Alice")
+user2 = User.new("Theo")
 user2.rent_scooter(scooter2)
 user2.break_scooter(scooter2)
 user2.repair_scooter(scooter2)
