@@ -23,7 +23,7 @@ user = User.new('John Doe', 'john.doe@example.com', 25)
 scooter = Scooter.new('2022-01-01 09:00:00', '2022-01-01 11:00:00')
 
 # Create Station
-station = Station.new('Central Station', '123 Main St')
+station = Station.new('Aeropod', 'Tanjung Aru')
 
 # Perform Calculation
 calculation = Calculation.new(scooter.start_time, scooter.end_time)
